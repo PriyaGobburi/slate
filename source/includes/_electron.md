@@ -4,6 +4,10 @@ This is a client for edchain based on the electron framework.
 
 Note: Version 6x, or higher, of NodeJS is required.
 
+# Introduction
+
+Using a decentralized network and blockchain technology, edChain enables students,educators and employers to interact directly and participate in the exchange of education and learning, without the involvement of intermediaries.
+
 ## Getting Started For Developers
 
 You need a mac os or linux to get started. If you have neither, please install [Oracle Virtual Box] https://www.virtualbox.org/wiki/Downloads and follow instructions [here](https://www.lifewire.com/run-ubuntu-within-windows-virtualbox-2202098) to install Ubuntu on the virtual box. 
