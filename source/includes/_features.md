@@ -16,5 +16,5 @@ edChain app has 3 main tabs.
 * You can use search option to search for content, courses etc on this app. Click on searchicon. ![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/baseline_search_black_18dp.png) and type the text.
 * You can access the videos on homepage as well as with search option. Videos are categorized by each existing topic on edChain app.<br>
 One can share the videos by clicking on share icon. 
-![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/icons8-forward-arrow-50.png)
+![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/baseline_screen_share_black_18dp.png)
 
