@@ -1,52 +1,57 @@
-# Installation
+# Download & Installation
 
-This is a client for edchain based on the electron framework.
+Ed-Chain currently has 3 key modules
 
-Note: Version 6x, or higher, of NodeJS is required.
+* API module
 
-## Getting Started For Developers
+* VideoScraper module
 
-You need a mac os or linux to get started. If you have neither, please install [Oracle Virtual Box] https://www.virtualbox.org/wiki/Downloads and follow instructions [here](https://www.lifewire.com/run-ubuntu-within-windows-virtualbox-2202098) to install Ubuntu on the virtual box. 
+* Android App
 
-You will also need to install Git. Follow instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to install it. Once complete, please get edchain running on your machine. The instructions are stated below.
+**Note:** You have have to preface some of these commands with `sudo` to meet privilege requirements defined by your operating system.
 
-NodeJS is also required. Please install node js with instructions [here](https://nodejs.org/en/download/package-manager/)
+## General requirements
 
-Enter the following commands to get edChain up-and-running:
+* You will need to install Git. Follow instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to install it. 
 
-Note: You have have to preface some of these commands with `sudo` to meet privilege requirements defined by your operating system.
+* NodeJS is also required. Please install node js with instructions [here](https://nodejs.org/en/download/package-manager/)
 
-### Download & Installation
+* MongoDB is also required. Please install mongodb with instructions [here](https://docs.mongodb.com/v3.2/administration/install-community/)
 
-* Clone this repository:
-`git clone https://github.com/edchainio/client-gui.git`
+* Python version >=3.5.x is required. You can download and install it from [here](https://www.python.org/downloads/)
 
-* Move into the directory of the project:
-`cd client-gui`
+* pip/pip3 is also required.
 
-* Install the NodeJS dependencies:
-`npm install`
 
-### Development Build
+## Ed-Chain API module
 
-* Run start script:
-`npm start`
+* Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-api`
 
-### Production Build
+* Move into the project directory: `cd edchain-api`
 
-* For Windows:
-`npm run build`
-The output distribution files will be located at edchain-client-gui/dist/edChain-win32-x64
+* Install project dependecies: `npm install`
 
-* For Linux Dist:
-`npm run deb64`
-The output distribution files will be located at edchain-client-gui/dist/installer
+## Ed-Chain VideoScraper module
 
-* For MacOS/Darwin Dist:
-`npm run darwin`
-The output distribution files will be located at edchain-client-gui/dist/installer
+* Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-videoScraper`
 
-## Readings
+* Move into the project directory: `cd edchain-videoScraper/edchain-videoScraper`
+
+* Install project dependencies: `pip3 install -r requirements.txt`
+
+## Ed-Chain Android Project
+
+* Setup the Android environment: Go to this [link](https://facebook.github.io/react-native/docs/getting-started.html), click on *"Building Projects With Native Code"* tab, and follow the instructions. 
+
+* Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-android`
+
+* Move into the project directory: `cd edchain-android`
+
+* Install project dependencies: `npm install`
+
+
+# Readings
+
 If you are not familiar with git, please look at this tutorial: https://try.github.io/levels/1/challenges/1
 
 This is the framework that the application is built on. Please read before you start working on the application. 
