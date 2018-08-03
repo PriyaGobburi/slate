@@ -7,7 +7,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 toc_footers:
   - <a href='https://app.swaggerhub.com/apis/devarshjoshi/edChainAPI/0.1#/'>Checkout the edChain API</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - <a href='#'>Request for a developer key</a>
 
 includes:
   - intro

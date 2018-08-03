@@ -8,19 +8,19 @@ Ed-Chain currently has 3 key modules
 
 * Android App
 
-**Note:** You have have to preface some of these commands with `sudo` to meet privilege requirements defined by your operating system.
+<aside class="notice">
+You have to execute some of these commands as <strong>sudo</strong> or <strong>administrator</strong> to meet privilege requirements defined by your operating system.
+</aside>
 
 ## General requirements
 
-* You will need to install Git. Follow instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to install it. 
+* You will need to install Git. Follow instructions <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">here</a> to install it. 
 
-* NodeJS is also required. Please install node js with instructions [here](https://nodejs.org/en/download/package-manager/)
+* NodeJS is also required. Please install node js with instructions <a href="https://nodejs.org/en/download/package-manager/" target="_blank">here</a>
 
-* MongoDB is also required. Please install mongodb with instructions [here](https://docs.mongodb.com/v3.2/administration/install-community/)
+* MongoDB is also required. Please install mongodb with instructions <a href="https://docs.mongodb.com/v3.2/administration/install-community/" target="_blank">here</a>
 
-* Python version >=3.5.x is required. You can download and install it from [here](https://www.python.org/downloads/)
-
-* pip/pip3 is also required.
+* Python version >=3.5.x is required. You can download and install it from <a href="https://www.python.org/downloads/" target="_blank">here</a>
 
 
 ## Ed-Chain API module
@@ -37,11 +37,11 @@ Ed-Chain currently has 3 key modules
 
 * Move into the project directory: `cd edchain-videoScraper/edchain-videoScraper`
 
-* Install project dependencies: `pip3 install -r requirements.txt`
+* Make sure you have **pip** installed (it comes with the python installation) and Install project dependencies by executing the following command: `pip install -r requirements.txt`
 
 ## Ed-Chain Android Project
 
-* Setup the Android environment: Go to this [link](https://facebook.github.io/react-native/docs/getting-started.html), click on *"Building Projects With Native Code"* tab, and follow the instructions. 
+* Setup the Android environment: Go to this <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank">link</a>, click on *"Building Projects With Native Code"* tab, and follow the instructions. 
 
 * Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-android`
 
