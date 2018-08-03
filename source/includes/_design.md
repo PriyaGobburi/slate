@@ -7,4 +7,16 @@ It contains information about the structure of its content. For the most basic c
 
 # Design
 
-TODO
+edChain consists of 3 main components
+* edChain core
+* edChain API
+* edChain Videoscraper
+
+# edChain core design
+![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_AndroidDesign.jpg)
+
+# edChain API design
+![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_API.jpg)
+
+# edChain Videoscraper design
+![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_Video_Scraper.jpg)
