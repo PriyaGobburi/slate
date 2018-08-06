@@ -8,7 +8,7 @@ It contains information about the structure of its content. For the most basic c
 # Design
 
 edChain consists of 3 main components
-* edChain core
+* edChain Android
 * edChain API
 * edChain Videoscraper
 
