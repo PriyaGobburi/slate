@@ -13,10 +13,10 @@ edChain consists of 3 main components
 * edChain Videoscraper
 
 # edChain core design
-![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_AndroidDesign.jpg)
+![Alt Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_AndroidDesign.jpg)
 
 # edChain API design
-![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_API.jpg)
+![Alt Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_API.jpg)
 
 # edChain Videoscraper design
-![Alt Text](https://github.com/PriyaGobburi/slate/blob/master/source/images/edChain_Video_Scraper.jpg)
+![Alt Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Video_Scraper.jpg)
