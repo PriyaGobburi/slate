@@ -146,3 +146,7 @@ Issue caused by the number of directories inotify (used by watchman on Linux) ca
 ```
 echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
+## react-native known issues
+
+https://www.decoide.org/react-native/docs/known-issues.html
