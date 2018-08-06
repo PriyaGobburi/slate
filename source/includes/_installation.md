@@ -1,6 +1,6 @@
 # Download & Installation
 
-Ed-Chain currently has 3 key modules
+edChain currently has 3 key modules
 
 * API module
 
@@ -14,16 +14,17 @@ You have to execute some of these commands as <strong>sudo</strong> or <strong>a
 
 ## General requirements
 
-* You will need to install Git. Follow instructions <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">here</a> to install it. 
+You need to have the following softwares installed on your machine to get the edChain up and running.
 
-* NodeJS is also required. Please install node js with instructions <a href="https://nodejs.org/en/download/package-manager/" target="_blank">here</a>
+Name of the Software | Preferred Version | Download Link
+---------------------|-------------------|----------------
+ <center>Git Version Control</center> |        <center>NA</center>         |<center><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">git</a></center>
+      <center>Node JS</center>        |        <center>x.x</center>        |<center><a href="https://nodejs.org/en/download/package-manager/" target="_blank">node js</a></center>
+      <center>MongoDb</center>        |        <center>x.x</center>        |<center><a href="https://docs.mongodb.com/v3.2/administration/install-community/" target="_blank">mongodb</a></center>
+      <center>Python</center>         |       <center>>=3.5</center>       |<center><a href="https://www.python.org/downloads/" target="_blank">python</a></center>
 
-* MongoDB is also required. Please install mongodb with instructions <a href="https://docs.mongodb.com/v3.2/administration/install-community/" target="_blank">here</a>
 
-* Python version >=3.5.x is required. You can download and install it from <a href="https://www.python.org/downloads/" target="_blank">here</a>
-
-
-## Ed-Chain API module
+## edChain API module
 
 * Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-api`
 
@@ -31,7 +32,7 @@ You have to execute some of these commands as <strong>sudo</strong> or <strong>a
 
 * Install project dependecies: `npm install`
 
-## Ed-Chain VideoScraper module
+## edChain VideoScraper module
 
 * Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-videoScraper`
 
@@ -39,7 +40,7 @@ You have to execute some of these commands as <strong>sudo</strong> or <strong>a
 
 * Make sure you have **pip** installed (it comes with the python installation) and Install project dependencies by executing the following command: `pip install -r requirements.txt`
 
-## Ed-Chain Android Project
+## edChain Android application
 
 * Setup the Android environment: Go to this <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank">link</a>, click on *"Building Projects With Native Code"* tab, and follow the instructions. 
 
@@ -50,18 +51,5 @@ You have to execute some of these commands as <strong>sudo</strong> or <strong>a
 * Install project dependencies: `npm install`
 
 
-# Readings
 
-If you are not familiar with git, please look at this tutorial: https://try.github.io/levels/1/challenges/1
-
-This is the framework that the application is built on. Please read before you start working on the application. 
-https://electronjs.org/docs/tutorial/quick-start
-
-The main file in our case is app.js and the main ui file is index.html.
-
-Coding Guidlines:
-
-[General](https://github.com/Automattic/wp-calypso/blob/master/docs/coding-guidelines.md)
-
-[Javascript](https://github.com/Automattic/wp-calypso/blob/master/docs/coding-guidelines/javascript.md)
 

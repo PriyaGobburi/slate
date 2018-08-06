@@ -13,6 +13,49 @@ edChain consists of 3 main components
 * edChain Videoscraper
 
 ## edChain Android design
+
+
+```
+edchain-android
+	|
+	|\
+	| \
+	|  android
+	|\
+	| \
+	|  assets
+	|\
+	| \
+	|  gen
+	|\
+	| \
+	|  ios
+	|\
+	| \
+	|  node_modules
+	|\
+	| \ 
+	|  src
+	|	|
+		|\
+		| config
+		|	|
+		|	|\
+		|	| agent.js
+		|	|\
+		|	| constants.js
+		|	|\
+		|	| routes.js
+		|\
+		| Explore
+		|\
+		| Home
+		|\
+		| Stellar
+		|\
+		| styles
+```
+
 ![Design Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_AndroidDesign.jpg)
 
 ## edChain API design
