@@ -71,11 +71,9 @@ courses collection
 }
 ```
 The id property
-The id property serves two purposes:
-
-It declares a unique identifier for the schema.
-It declares a base URL against which $ref URLs are resolved.
-
+The id property serves as unique identifies for each object in the schema.
+Ex: 
+"id": "5b15997284c535f7c78b06cc"
 
 # Project Structure
 
