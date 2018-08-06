@@ -7,6 +7,7 @@ It contains information about the structure of its content. For the most basic c
 
 Schema that defines a Yale course video
 courses collection
+```json
 {
   "_id": "ObjectId",
   "subject_matter":  "string"
@@ -27,8 +28,9 @@ courses collection
              }
   "document_root": "string"
 }
-
+```
 lectures Array Object
+```json
 {
   "lecture_title": "ObjectId",
   "english_transcript":  "string"
@@ -47,8 +49,9 @@ lectures Array Object
   "course_hyperlink": "https://youtu.be/nAn02VhQ0GM"
   "content_address": "string"
 }
-
+```
 Schema that defines a MIT course video
+```json
 courses collection
 {
   "_id": "ObjectId",
@@ -66,7 +69,7 @@ courses collection
   "subject_matter": "string"
   "unique_identifier": "string"
 }
-
+```
 The id property
 The id property serves two purposes:
 
