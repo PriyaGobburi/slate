@@ -1,5 +1,7 @@
 # Troubleshooting
 
+In this section, we’ll take a look at a general debugging checklist that can help you identify the actual issue that you’re having.
+
 ## Failing build on react-native run-windows
 Error
 ```
@@ -162,3 +164,56 @@ C:\Program Files\MongoDB\Server\3.6\bin>mongod --dbpath "C:\Program Files\MongoD
 C:\Program Files\MongoDB\Server\3.6\bin>net start MongoDB
 
 C:\Program Files\MongoDB\Server\3.6\bin>Mongo
+
+## native module error
+
+If you’re trying to get a native module to work, and you’ve followed the install instructions to the letter. But still it wouldn’t work, the solution may be to clear out your node_modules and re-install all the packages:
+
+``
+ rm -r node_modules
+ npm install
+ ``
+ After that, execute the following:
+ ``
+ cd android
+ ./gradlew clean
+``
+This will delete the build directory and make sure that no previous code or resources are still being cached.
+
+You may even go one step further by clearing out the Gradle’s dependency cache:
+``
+./gradlew build --refresh-dependencies
+``
+Once that’s done, go back to your project’s root directory and execute react-native run-android like usual.
+
+## Android path not added to the environment
+
+The first time you build your Android app after setting up your computer for React Native development, you might encounter an issue similar to the following:
+
+``
+FAILURE: Build failed with an exception.
+
+    * What went wrong:
+    A problem occurred configuring project ':app'.
+    > SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.
+``
+This happens when you haven’t properly configured your environment variables to use the path where Android is installed. React Native requires this if you’re running the app on Android.
+
+To solve the issue, you need to add the Android path to your environment variables.
+
+In Ubuntu, this can be done by editing the .bash_profile file located in your home directory:
+
+``nano ~/.bash_profile``
+
+Add the following to the file then save it:
+
+`` export ANDROID_HOME=$HOME/Android/Sdk
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    ``
+Then you can execute the following command to propagate the change to your system:
+
+`` source ~/.bash_profile``
+
+For Windows, here’s a detailed tutorial on how you can add the Android path: <a href="http://www.automationtestinghub.com/setup-android-environment-variables/" target="_blank">Setup Android Environment Variables.</a>
