@@ -150,3 +150,15 @@ echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo s
 ## react-native known issues
 
 https://www.decoide.org/react-native/docs/known-issues.html
+
+## Could not connect to MongoDB on the provided host and port
+
+Execute mongod command and start mongodb.
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongod --dbpath "C:\Program Files\MongoDB\data\db" 
+(or)
+C:\Program Files\MongoDB\Server\3.6\bin>mongod --dbpath "C:\Program Files\MongoDB\data\db" --logpath "C:\Program Files\MongoDB\log\mongo.log" --logappend --rest --install
+
+C:\Program Files\MongoDB\Server\3.6\bin>net start MongoDB
+
+C:\Program Files\MongoDB\Server\3.6\bin>Mongo
