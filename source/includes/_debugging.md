@@ -1,5 +1,7 @@
 # Troubleshooting
 
+In this section, we’ll take a look at a general debugging checklist that can help you identify the actual issue that you’re having.
+
 ## Failing build on react-native run-windows
 Error
 ```
@@ -162,3 +164,142 @@ C:\Program Files\MongoDB\Server\3.6\bin>mongod --dbpath "C:\Program Files\MongoD
 C:\Program Files\MongoDB\Server\3.6\bin>net start MongoDB
 
 C:\Program Files\MongoDB\Server\3.6\bin>Mongo
+
+## native module error
+
+If you’re trying to get a native module to work, and you’ve followed the install instructions to the letter. But still it wouldn’t work, the solution may be to clear out your node_modules and re-install all the packages:
+
+``
+ rm -r node_modules
+ npm install
+ ``
+ After that, execute the following:
+ ``
+ cd android
+ ./gradlew clean
+``
+This will delete the build directory and make sure that no previous code or resources are still being cached.
+
+You may even go one step further by clearing out the Gradle’s dependency cache:
+``
+./gradlew build --refresh-dependencies
+``
+Once that’s done, go back to your project’s root directory and execute react-native run-android like usual.
+
+## Android path not added to the environment
+
+The first time you build your Android app after setting up your computer for React Native development, you might encounter an issue similar to the following:
+
+``
+FAILURE: Build failed with an exception.
+
+    * What went wrong:
+    A problem occurred configuring project ':app'.
+    > SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.
+``
+This happens when you haven’t properly configured your environment variables to use the path where Android is installed. React Native requires this if you’re running the app on Android.
+
+To solve the issue, you need to add the Android path to your environment variables.
+
+In Ubuntu, this can be done by editing the .bash_profile file located in your home directory:
+
+``nano ~/.bash_profile``
+
+Add the following to the file then save it:
+
+`` export ANDROID_HOME=$HOME/Android/Sdk
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    ``
+Then you can execute the following command to propagate the change to your system:
+
+`` source ~/.bash_profile``
+
+For Windows, here’s a detailed tutorial on how you can add the Android path: <a href="http://www.automationtestinghub.com/setup-android-environment-variables/" target="_blank">Setup Android Environment Variables.</a>
+
+## Required Android packages not installed
+
+Another issue which you might encounter when first starting out is that the Android packages required by React Native are not installed.
+
+You can solve this by opening Android studio, then click on the configure button and select SDK Manager.
+
+Check the below packages
+
+* Android 6.0 (Marshmallow)
+  * Google APIs
+  * Android SDK Platform 23
+  * Intel x86 Atom_64 System Image
+  * Google APIs Intel x86 Atom_64 System Image
+  
+  Next, under the SDK Tools tab, the requirement is Android SDK Build-Tools version 23.0.1.
+  
+  Go through the installation process and that should solve the issue. Note that the items I’ve checked are the ones that are required by React Native.
+
+If you’re using Google Play services in your project, you should install the following packages from the SDK Tools as well:
+
+Google Play services
+Support Repository
+Android Support Repository
+Google Repository
+
+## Build tool problems
+
+Sometimes, you’ll also encounter problems with the build tools that React Native uses for building the app or running the development server.
+* Watchman
+
+React Native uses Watchman to watch the project files for changes. This allows you to automatically rebuild the app so the changes will be reflected on the emulator or device as you’re developing.
+
+Here’s the error that you’ll usually get if there is a problem with Watchman. This problem usually occurs in Ubuntu, but it can occur in other operating systems as well:
+The build log says the error is:
+``    Could not run adb reverse: Command failed: /home/wern/Android/Sdk/platform-tools/adb -s 192.168.56.101:5555 reverse tcp:8081 tcp:8081
+``
+Unfortunately, Googling the error “could not run adb reverse react native” doesn’t really return results which point out to the actual cause of the problem. It only gives us the idea that something is wrong with the development server.
+
+To solve this issue, you need to run the development server separately. You can do that by executing react-native start.
+
+This returns the actual error which prevents the development server from running automatically:
+
+`` inotify-add-watch(/home/wern/dev/mobile/TestProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir) -> The user limit on the total number of inotify watches was reached; increase the fs.inotify.max_user_watches sysctl
+
+    All requests will continue to fail with this message until you resolve 
+    the underlying problem.  You will find more information on fixing this at
+    https://facebook.github.io/watchman/docs/troubleshooting.html#poison-inotify-add-watch
+ 
+ ``
+   
+This points you out to the following page: <a href="https://facebook.github.io/watchman/docs/troubleshooting.html#poison-inotify-add-watch">Troubleshooting Watchman</a>. Which then points out to this page: <a href="https://facebook.github.io/watchman/docs/install.html#system-specific-preparation">Installation</a> for the actual solution.
+
+Unfortunately, the solution presented isn’t really very helpful. Especially if you don’t have much experience with Linux commands.
+
+Here’s are the commands which you need to execute:
+
+``    sudo sysctl fs.inotify.max_user_instances=99999
+    sudo sysctl fs.inotify.max_user_watches=99999
+    sudo sysctl fs.inotify.max_queued_events=9999
+    ``
+This raises the limits of the inotify-watches to a really high value. Setting it to a value of 99999 is like saying to Watchman to use however much resource it needs to watch the directories. Because the underlying issue here is that Watchman wasn’t able to allocate the resources it needs because the default values were too low.
+
+After that, shut down the Watchman server so the changes will be reflected in the system:
+
+``watchman shutdown-server``
+
+Once that’s done, executing react-native start should work smoothly. You can even skip it and just run react-native run-android because that will also run the development server in the background. Be sure to terminate the currently running process before you proceed (press Ctrl + C or Cmd + C on your keyboard).
+
+## Gradle
+
+Gradle is the build tool used for Android app development. React Native also taps into it in order to build and compile the app to an executable .apk file.
+
+The most common problem that you might encounter, especially when your project is using a lot of third-party native modules, is the collision of Gradle dependencies. Collisions occur when two or more native modules are using different versions of native dependencies.
+
+The most common among the native dependencies which cause a collision is the Google Play service. Any native module which uses Google’s services (for example, Firebase, Google Maps, AdMob) imports Google Play services as one of its native dependency.
+
+The good news is someone has already written about this subject in really nice detail, so I’ll just point you out to the article: <a href="https://medium.com/@suchydan/how-to-solve-google-play-services-version-collision-in-gradle-dependencies-ef086ae5c75f">How to solve Google Play Services version collision in Gradle dependencies.</a>
+
+In the future, it’s always a good idea to check whether you’ll have a potential collision before installing a specific module. You can do that by opening the android/app/build.gradle file on the modules Github repo.
+
+For example, here’s the build.gradle file of the <a href="https://github.com/sbugert/react-native-admob">React Native AdMob</a> module. Check the packages under the dependencies to find out whether you will have a collision. And then use the article I’ve pointed out above as a guide for dealing with the collision:
+
+## Third-party package issues
+
+<a href="https://blog.pusher.com/debugging-react-native-android/"> Issues commonly encountered when using third-party packages</a>
