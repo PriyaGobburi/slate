@@ -19,8 +19,8 @@ You need to have the following softwares installed on your machine to get the ed
 Name of the Software | Preferred Version | Download Link
 ---------------------|-------------------|----------------
  <center>Git Version Control</center> |        <center>NA</center>         |<center><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">git</a></center>
-      <center>Node JS</center>        |        <center>x.x</center>        |<center><a href="https://nodejs.org/en/download/package-manager/" target="_blank">node js</a></center>
-      <center>MongoDb</center>        |        <center>x.x</center>        |<center><a href="https://docs.mongodb.com/v3.2/administration/install-community/" target="_blank">mongodb</a></center>
+      <center>Node JS</center>        |        <center>>=8.3</center>        |<center><a href="https://nodejs.org/en/download/package-manager/" target="_blank">node js</a></center>
+      <center>MongoDb</center>        |        <center>>=3.6</center>        |<center><a href="https://docs.mongodb.com/v3.2/administration/install-community/" target="_blank">mongodb</a></center>
       <center>Python</center>         |       <center>>=3.5</center>       |<center><a href="https://www.python.org/downloads/" target="_blank">python</a></center>
 
 

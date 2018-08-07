@@ -6,8 +6,10 @@ Every edChain contributor needs to have edChain database schema setup at their e
 It contains information about the structure of its content. For the most basic cases, you'll just rely on edChain's default core schema. But for advanced use cases, you can enforce rules about what the content of a edChain document can contain.
 
 Schema that defines a Yale course video
-courses collection
-```json
+
+> courses collection
+
+```markdown
 {
   "_id": "ObjectId",
   "subject_matter":  "string"
@@ -29,8 +31,10 @@ courses collection
   "document_root": "string"
 }
 ```
-lectures Array Object
-```json
+
+> lectures Array Object
+
+```markdown
 {
   "lecture_title": "ObjectId",
   "english_transcript":  "string"
@@ -51,8 +55,10 @@ lectures Array Object
 }
 ```
 Schema that defines a MIT course video
-```json
-courses collection
+
+> courses collection
+
+```markdown
 {
   "_id": "ObjectId",
   "content_address": "string"
@@ -82,12 +88,15 @@ edChain consists of 3 main components
 * edChain videoScraper
 * edChain android
 
+<aside class="notice">
+  
+</aside>
 
 ## edChain API
 
 > Folder Structure of the edChain API Project
 
-```
+```markdown
 edchain-api
       |
       |--+ config
@@ -103,32 +112,46 @@ edchain-api
 
 Here we define the directories
 
-* <strong>config: </strong>
+* <strong>config:</strong>
 
-* models:
+* <strong>models:</strong>
 
-* routes:
+* <strong>routes:</strong>
 
-* tests:
+* <strong>tests:</strong>
 
 
 ## edChain VideoScraper
 
+
+
 > Folder Structure of the edChain VideoScraper Project
 
-```
+```markdown
 edchain-videoScraper
       |
-      |--+ DatabaseBashScript
+      |--- DatabaseBashScript
+      |     |
+      |     |--+ CourseData
+      |     |
+      |     |--- mongoImportAll.sh
       |
-      |--+ edchain-videoScraper
+      |--- edchain-videoScraper
+      |     |
+      |     |--- edChain_scraper.py
+      |     |
+      |     |--- curationWeightsAlgorithm.py
+      |     |
+      |     |--- curationConstants.py
+      |     |
+      |     |--- wsgi.py
 ```
 
 ## edChain android
 
 > Folder Structure of the edChain android Project
 
-```
+```markdown
 edchain-android
       |
       |--+ src
