@@ -13,8 +13,6 @@ includes:
   - intro
   - features
   - design
-  - usecases
-  - coding
   - installation
   - up&running
   - apiReference

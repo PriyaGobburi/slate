@@ -1,5 +1,15 @@
 # Get edChain up and running
 
+## Setup the database
+
+edChain API server uses MongoDb to store data. So, MongoDb needs to be setup before running the edChain-API server. Follow the instructions to create....
+
+* Move into the project directory: `cd edchain-videoScraper/DatabaseBashScript`
+
+* Run `bash mongoImportAll.sh`
+
+* If executed successfully, this bash script should create a database called `edchain` and other essential collections like `courses`
+
 ## Run edChain API server
 
 * Move into the project directory: `cd edchain-api`
