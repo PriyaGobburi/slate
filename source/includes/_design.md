@@ -1,13 +1,23 @@
 # Architecture of edChain
 
-TODO: Need to update this section
+edChain architecture consists of user interface, 2 main modules and edChain database.
+* edChain Android : User interaction with App takes place here. 
+* edChain API : It provides meta data to the users and developers
+* Curation Module : All videos are constructed, formatted and ordered here.
+* Mongo DB : Database collects and stores the data.
+
+![Architecture Icon](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Architecture.jpg)
+
+
+
 ## Schema
 Every edChain contributor needs to have edChain database schema setup at their end. 
 It contains information about the structure of its content. For the most basic cases, you'll just rely on edChain's default core schema. But for advanced use cases, you can enforce rules about what the content of a edChain document can contain.
 
 Schema that defines a Yale course video
 courses collection
-```json
+
+```
 {
   "_id": "ObjectId",
   "subject_matter":  "string"
@@ -30,7 +40,7 @@ courses collection
 }
 ```
 lectures Array Object
-```json
+```
 {
   "lecture_title": "ObjectId",
   "english_transcript":  "string"
@@ -51,7 +61,7 @@ lectures Array Object
 }
 ```
 Schema that defines a MIT course video
-```json
+```
 courses collection
 {
   "_id": "ObjectId",
