@@ -1,4 +1,6 @@
 # Introduction
+edChain repositories are private since it is in development stage now.We will release it to the community soon.
+Please go through our documentation for more details.
 
 Welcome to the edChain API! You can use our API to access edChain API endpoints, which can get information on various courses in our database.
 
