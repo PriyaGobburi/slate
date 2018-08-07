@@ -95,6 +95,18 @@ edChain consists of 3 main components
 
 ## edChain API
 
+This API module consists of 5 main components.
+
+* config: All configuration goes here.
+
+* models: Describes the sturcture of internal components.
+
+* routes: It acts like a middle tier.
+
+* tests: Tests are added here
+
+* app.js: It is entry point for API
+
 > Structure of the edChain API Project
 
 ```markdown
@@ -111,6 +123,12 @@ edchain-api
       |--- app.js
 ```
 ## edChain curation_module
+
+edChain curation module consists of 2 main components.
+
+* DatabaseBashScript : TODO
+
+* edchain-videoScraper : TODO
 
 > Structure of the edChain curation_module Project
 
@@ -134,6 +152,10 @@ edchain-videoScraper
       |     |--- wsgi.py
 ```
 ## edChain Android application
+
+edChain Android aplication module consists of one main components.
+
+* source : TODO
 
 > Structure of the edChain android Project
 
