@@ -10,7 +10,7 @@ edChain architecture consists of user interface, 2 main modules and edChain data
 
 * <strong>Mongo DB:</strong> Database collects and stores the data.
 
-![Architecture Icon](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Architecture.jpg)
+![Architecture Icon](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Architecture1.png)
 
 
 
