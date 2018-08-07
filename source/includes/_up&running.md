@@ -6,7 +6,7 @@
 
 * Run `node app.js`
 
-* You should see a message on the console saying *"connected to database"*. If you see any errors please take a look at the <a href="#debugging">debugging</a> section.
+* You should see a message on the console saying *"connected to database"*. If you see any errors please take a look at the <a href="#troubleshooting">troubleshooting</a> section.
 
 * Congrats! Your edChain-API is live and listening on **"YOUR_IP_ADDRESS:3000"**
 
@@ -16,7 +16,7 @@
 
 * Run `gunicorn --bind 0.0.0.0:8000 wsgi`
 
-* You should see a message on the console saying *"Listening at: http://0.0.0.0:8000"*. If you see any errors checkout the <a href="#debugging">debugging</a> section.
+* You should see a message on the console saying *"Listening at: http://0.0.0.0:8000"*. If you see any errors checkout the <a href="#troubleshooting">troubleshooting</a> section.
 
 * Bravo! Your edChain-VideoScraper server is up and listening on port **8000**.
 
@@ -30,4 +30,4 @@
 
 * Run `react-native run-android`
 
-* This command should get the app running on the simulator or a Physical device. If you see any errors checkout the <a href="#debugging">debugging</a> section.
+* This command should get the app running on the simulator or a Physical device. If you see any errors checkout the <a href="#troubleshooting">troubleshooting</a> section.

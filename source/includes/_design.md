@@ -78,58 +78,69 @@ Ex:
 # Project Structure
 
 edChain consists of 3 main components
-* edChain Android
 * edChain API
-* edChain Videoscraper
+* edChain videoScraper
+* edChain android
 
-## edChain Android design
 
+## edChain API
+
+> Folder Structure of the edChain API Project
+
+```
+edchain-api
+      |
+      |--+ config
+      |
+      |--+ models
+      |
+      |--+ routes
+      |
+      |--+ tests
+      |
+      |--- app.js
+```
+
+Here we define the directories
+
+* <strong>config: </strong>
+
+* models:
+
+* routes:
+
+* tests:
+
+
+## edChain VideoScraper
+
+> Folder Structure of the edChain VideoScraper Project
+
+```
+edchain-videoScraper
+      |
+      |--+ DatabaseBashScript
+      |
+      |--+ edchain-videoScraper
+```
+
+## edChain android
+
+> Folder Structure of the edChain android Project
 
 ```
 edchain-android
-	|
-	|\
-	| \
-	|  android
-	|\
-	| \
-	|  assets
-	|\
-	| \
-	|  gen
-	|\
-	| \
-	|  ios
-	|\
-	| \
-	|  node_modules
-	|\
-	| \ 
-	|  src
-	|	|
-		|\
-		| config
-		|	|
-		|	|\
-		|	| agent.js
-		|	|\
-		|	| constants.js
-		|	|\
-		|	| routes.js
-		|\
-		| Explore
-		|\
-		| Home
-		|\
-		| Stellar
-		|\
-		| styles
+      |
+      |--+ src
+            |
+            |--+ config
+            |
+      	    |--+ Explore
+      	    |
+            |--+ Home
+            |
+            |--+ Stellar
+            |
+            |--+ styles
 ```
 
-![Design Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_AndroidDesign.jpg)
-
-## edChain API design
-![Design Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_API.jpg)
-
-## edChain Videoscraper design
-![Design Text](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Video_Scraper.jpg)
