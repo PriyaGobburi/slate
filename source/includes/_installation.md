@@ -32,7 +32,7 @@ Name of the Software | Preferred Version | Download Link
 
 * Install project dependecies: `npm install`
 
-## edChain VideoScraper module
+## edChain Curation module
 
 * Clone the repository: `git clone https://github.com/ByteAcademyCo/edchain-videoScraper`
 

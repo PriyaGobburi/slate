@@ -1,23 +1,23 @@
 # Architecture of edChain
 
 edChain architecture consists of user interface, 2 main modules and edChain database.
-* edChain Android : User interaction with App takes place here. 
-* edChain API : It provides meta data to the users and developers
-* Curation Module : All videos are constructed, formatted and ordered here.
-* Mongo DB : Database collects and stores the data.
+
+* <strong>edChain Android:</strong> User interaction with App takes place here. 
+
+* <strong>edChain API:</strong> It provides meta data to the users and developers
+
+* <strong>Curation Module:</strong> All videos are constructed, formatted and ordered here.
+
+* <strong>Mongo DB:</strong> Database collects and stores the data.
 
 ![Architecture Icon](https://raw.githubusercontent.com/PriyaGobburi/slate/master/source/images/edChain_Architecture.jpg)
 
 
 
 ## Schema
-Every edChain contributor needs to have edChain database schema setup at their end. 
-It contains information about the structure of its content. For the most basic cases, you'll just rely on edChain's default core schema. But for advanced use cases, you can enforce rules about what the content of a edChain document can contain.
 
-Schema that defines a course video
-courses is a collection
-lectures Array Object
-statistics Array Object
+
+> Sample Course Structure
 
 ```
  {     
@@ -67,6 +67,15 @@ statistics Array Object
         "course_title": "How Bitcoin and The Blockchain works | Chad Cascarilla"
     }
 ```
+
+Every edChain contributor needs to have edChain database schema setup at their end. 
+It contains information about the structure of its content. For the most basic cases, you'll just rely on edChain's default core schema. But for advanced use cases, you can enforce rules about what the content of a edChain document can contain.
+
+Schema that defines a course video
+courses is a collection
+lectures Array Object
+statistics Array Object
+
 The id property
 The id property serves as unique identifies for each object in the schema.
 Ex: 
@@ -75,17 +84,18 @@ Ex:
 # Project Structure
 
 edChain consists of 3 main components
+
 * edChain API
-* edChain videoScraper
+* edChain curation_module
 * edChain android
 
 <aside class="notice">
-  
+  Only the core project files and dirctories are shown under the project structure
 </aside>
 
 ## edChain API
 
-> Folder Structure of the edChain API Project
+> Structure of the edChain API Project
 
 ```markdown
 edchain-api
@@ -100,23 +110,9 @@ edchain-api
       |
       |--- app.js
 ```
+## edChain curation_module
 
-Here we define the directories
-
-* <strong>config:</strong>
-
-* <strong>models:</strong>
-
-* <strong>routes:</strong>
-
-* <strong>tests:</strong>
-
-
-## edChain VideoScraper
-
-
-
-> Folder Structure of the edChain VideoScraper Project
+> Structure of the edChain curation_module Project
 
 ```markdown
 edchain-videoScraper
@@ -137,10 +133,9 @@ edchain-videoScraper
       |     |
       |     |--- wsgi.py
 ```
+## edChain Android application
 
-## edChain android
-
-> Folder Structure of the edChain android Project
+> Structure of the edChain android Project
 
 ```markdown
 edchain-android
@@ -157,4 +152,3 @@ edchain-android
             |
             |--+ styles
 ```
-
